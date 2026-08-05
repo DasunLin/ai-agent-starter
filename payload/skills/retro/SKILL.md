@@ -1,6 +1,6 @@
 ---
 name: retro
-description: 收尾覆盤 — 做完一段工作後把「做了什麼/下一步/踩到的坑」存成記憶筆記，並順手維護 L0 大小。下次接得上。觸發：/retro、覆盤、收尾、今天到這、做個總結、存個紀錄。
+description: 收尾覆盤 — 做完一段工作後把「做了什麼/下一步/踩到的坑」存成記憶筆記，並順手維護 L0 大小。下次接得上。觸發：{{CMD}}retro、覆盤、收尾、今天到這、做個總結、存個紀錄。
 ---
 # retro — 收尾覆盤
 
@@ -11,12 +11,12 @@ description: 收尾覆盤 — 做完一段工作後把「做了什麼/下一步/
 
 ## 2. 寫進記憶（一則一件事一個檔）
 每個值得記的事實：
-- 先查 `~/.claude/agent-memory/` 有沒有同主題 → 有就**更新**，沒有才新建 `<slug>.md`（檔頭 frontmatter：name + description，再寫內容）。
-- 在 `~/.claude/agent-memory/INDEX.md` 加一行指過去：`- [標題](檔名.md) — 一句話`。
+- 先查 `{{HOME}}agent-memory/` 有沒有同主題 → 有就**更新**，沒有才新建 `<slug>.md`（檔頭 frontmatter：name + description，再寫內容）。
+- 在 `{{HOME}}agent-memory/INDEX.md` 加一行指過去：`- [標題](檔名.md) — 一句話`。
 - 寧可少存精準的，不要多存雜訊。
 
 ## 3. L0 / 記憶 size 健康檢查（每次收尾順手做）
-agent 每開新對話都會把 `~/.claude/CLAUDE.md` 整個讀進去——**它越長，每次對話越慢、越貴**。所以：
+agent 每開新對話都會把 `{{HOME}}{{L0}}` 整個讀進去——**它越長，每次對話越慢、越貴**。所以：
 - **CLAUDE.md 保持精簡**（目標一螢幕內、只放恆久該知道的事）。發現它變臃腫 → 把「細節/個案」搬進 `agent-memory/` 的筆記，CLAUDE.md 只留指向。
 - **記憶筆記別膨脹**：發現 `agent-memory/` 出現重複/過期 → 合併重複、把不再相關的移到 `agent-memory/_archive/`（建這個資料夾放封存），修好 INDEX.md。
 - 不確定某段該留在 CLAUDE.md 還是搬出去 → 問使用者一句。
