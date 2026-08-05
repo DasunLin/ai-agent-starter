@@ -23,15 +23,15 @@
 無法確定自己是哪一個 → **停下來問使用者他是用 Claude 還是 ChatGPT**，不要兩邊都裝。
 
 ## 步驟 1 — 取得檔案（擇一；先試 git，失敗再用 curl 清單）
-**方法 A（首選）：** `git clone https://github.com/dasunlin/claude-agent-starter /tmp/claude-agent-starter`
-取得後**先驗證** `/tmp/claude-agent-starter/payload/L0.md` 存在；不存在代表失敗，改用方法 B。
+**方法 A（首選）：** `git clone https://github.com/dasunlin/ai-agent-starter /tmp/ai-agent-starter`
+取得後**先驗證** `/tmp/ai-agent-starter/payload/L0.md` 存在；不存在代表失敗，改用方法 B。
 
 **方法 B（git 不可用時，逐檔 curl 這 5 個檔，建好對應目錄）：**
-- `https://raw.githubusercontent.com/DasunLin/claude-agent-starter/main/payload/L0.md`
-- `https://raw.githubusercontent.com/DasunLin/claude-agent-starter/main/payload/agent-memory/INDEX.md`
-- `https://raw.githubusercontent.com/DasunLin/claude-agent-starter/main/payload/skills/agent-setup/SKILL.md`
-- `https://raw.githubusercontent.com/DasunLin/claude-agent-starter/main/payload/skills/relay/SKILL.md`
-- `https://raw.githubusercontent.com/DasunLin/claude-agent-starter/main/payload/skills/retro/SKILL.md`
+- `https://raw.githubusercontent.com/DasunLin/ai-agent-starter/main/payload/L0.md`
+- `https://raw.githubusercontent.com/DasunLin/ai-agent-starter/main/payload/agent-memory/INDEX.md`
+- `https://raw.githubusercontent.com/DasunLin/ai-agent-starter/main/payload/skills/agent-setup/SKILL.md`
+- `https://raw.githubusercontent.com/DasunLin/ai-agent-starter/main/payload/skills/relay/SKILL.md`
+- `https://raw.githubusercontent.com/DasunLin/ai-agent-starter/main/payload/skills/retro/SKILL.md`
 
 ## 步驟 2 — 佔位符替換（**裝進去之前先做，這步漏掉使用者會看到亂碼般的 `{{...}}`**）
 

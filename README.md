@@ -26,7 +26,7 @@
    - 接著可能有**一連串確認/同意**畫面，照著按下一步。
 3. 貼下面這段話、按 Enter：
 
-> 請用 curl 取得 `https://raw.githubusercontent.com/DasunLin/claude-agent-starter/main/SETUP.md` 的原始內容（不要用會摘要的方式），然後完全照著它幫我設定。我是新手，請一步步帶我。
+> 請用 curl 取得 `https://raw.githubusercontent.com/DasunLin/ai-agent-starter/main/SETUP.md` 的原始內容（不要用會摘要的方式），然後完全照著它幫我設定。我是新手，請一步步帶我。
 
 > 安裝過程它會**幾次跳出「要不要允許執行/寫入」**——正常的（它正準備幫你建檔案），按 **Allow / 允許 / Yes** 即可。
 
