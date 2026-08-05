@@ -55,7 +55,8 @@ payload 是 runtime 中立的，裡面有佔位符。依步驟 0 選定的那一
    - **只動這幾個同名 skill 資料夾**；使用者 `{{HOME}}skills/` 底下其他既有資料夾**一律不碰**。同名且內容不同先備份 `<name>.bak` 再覆蓋。
 4. 驗證（兩項都要做，缺一不可）：
    - `ls -R {{HOME}}` → 5 個檔到位。
-   - **`grep -r '{{' {{HOME}}` → 必須沒有任何殘留佔位符**。有殘留就回步驟 2 補replace，再驗一次。
+   - **只檢查我們裝的那 5 個檔**：`grep -l '{{' {{HOME}}{{L0}} {{HOME}}agent-memory/INDEX.md {{HOME}}skills/{agent-setup,relay,retro}/SKILL.md` → **必須無輸出**。有殘留就回步驟 2 補替換，再驗一次。
+     ⚠️ **不要對整個 {{HOME}} 下 `grep -r`** —— runtime 自己的快取/log（如 Codex 的 `models_cache.json`、`sessions/`）本來就含 `{{`，會誤判成殘留讓你白修。
    都過了才講一句「裝好了」。
 
 ## 步驟 4 — 請使用者重啟，並教「重啟才載入」的概念（講清楚，別只丟一句）
