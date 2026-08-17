@@ -15,6 +15,10 @@
 | **Claude**（Pro/Max） | <https://claude.ai> 桌面 App | **Code** 分頁 → New session |
 | **ChatGPT**（Plus/Pro） | <https://chatgpt.com/download> 桌面 App | **Codex** 分頁 → 新對話 |
 
+> 🪟 **Windows ＋ Claude 的人，先做這一步再往下：安裝 [Git for Windows](https://git-scm.com/downloads/win)，裝完把 Claude 完全關掉再打開。**
+> 這是 **Claude Code 自己的硬性需求**（它用 Git 來隔離每個 session），不是我們這個 starter 要求的。沒裝的話，你**選完資料夾就會跳出「Git is required」**——那個下載連結會把你帶到 github.com，很多人因此以為「要先申請 GitHub 帳號」。**不用帳號、不用註冊，就是裝一個工具程式，一路按下一步即可。**
+> Mac 通常已內建 Git，直接往下走就好。**ChatGPT／Codex 路線沒有這個需求。**
+
 兩邊都**不用碰終端機**，之後的步驟完全相同。（2026-07 起 Codex 已併進 ChatGPT 桌面 App，沒有獨立的 Codex App。）
 
 ## 怎麼用
@@ -33,8 +37,10 @@
 
 > 安裝過程它會**跳出「要不要允許執行/寫入」**——正常的（它正準備幫你建檔案），按 **Allow / 允許 / Yes**。若選項裡出現 **「Yes, and allow Claude to edit its own settings for this session」**，**選那個**，後面就不會一直問你。
 
-> ❌ **如果跳出要你安裝「命令列開發者工具 / Xcode / git」的視窗——按「不現在」，什麼都不用裝。**
-> 你**不需要** GitHub 帳號、不需要 git、不需要開發者工具。上面那個 github.com 網址只是「說明書放的位置」，AI 自己會去讀。真跳出來了就跟它說一句「不要用 git，改用 curl」，它會繼續。
+> 🍎 **Mac 專屬**：安裝**過程中**若跳出要你安裝「命令列開發者工具 / Xcode」的視窗——**按「不現在」，這個不用裝**。跟它說一句「不要用 git，改用 curl」就會繼續。
+> （🪟 Windows 那個「Git is required」是**不一樣的東西**、發生在更早的選資料夾階段，那個**要裝**，見上方前提。）
+>
+> 兩種情況都一樣：**你不需要 GitHub 帳號、不需要註冊任何東西。** 上面那個 github.com 網址只是「說明書放的位置」，AI 自己會去讀。
 
 **② 開一個新對話**
 開一個**新對話**就好——**App 不用關**。剛裝的指令要在新對話才會載入（它是在「開啟對話的那一刻」才掃描你裝了什麼）。
