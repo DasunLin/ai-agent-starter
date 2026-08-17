@@ -22,11 +22,13 @@
 
 無法確定自己是哪一個 → **停下來問使用者他是用 Claude 還是 ChatGPT**，不要兩邊都裝。
 
-## 步驟 1 — 取得檔案（擇一；先試 git，失敗再用 curl 清單）
-**方法 A（首選）：** `git clone https://github.com/dasunlin/ai-agent-starter /tmp/ai-agent-starter`
-取得後**先驗證** `/tmp/ai-agent-starter/payload/L0.md` 存在；不存在代表失敗，改用方法 B。
+## 步驟 1 — 取得檔案（**用 curl。不要用 git**）
 
-**方法 B（git 不可用時，逐檔 curl 這 5 個檔，建好對應目錄）：**
+> 🔴 **絕對不要先試 `git clone`。** 多數新手電腦沒裝 git：macOS 上執行 `git` 會跳出系統對話框要求安裝「命令列開發者工具」，使用者會以為「原來要先安裝 GitHub」然後卡在那裡不敢按 —— 這是實際回報最多的卡點。
+> 我們只需要 5 個純文字檔，**`curl` 在 macOS 與 Windows 10+ 都內建**，先試 git 沒有任何好處。
+> 若使用者已經看到那個安裝開發者工具的視窗：告訴他**按「不現在」就好、不需要安裝任何東西**，你改用 curl 繼續。
+
+**逐檔 curl 這 5 個檔，建好對應目錄：**
 - `https://raw.githubusercontent.com/DasunLin/ai-agent-starter/main/payload/L0.md`
 - `https://raw.githubusercontent.com/DasunLin/ai-agent-starter/main/payload/agent-memory/INDEX.md`
 - `https://raw.githubusercontent.com/DasunLin/ai-agent-starter/main/payload/skills/agent-setup/SKILL.md`
